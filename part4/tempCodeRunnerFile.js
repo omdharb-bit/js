@@ -1,1 +1,1 @@
-selectedTeas.push(teas[i]);
+console.log(availableTea
