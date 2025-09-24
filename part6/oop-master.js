@@ -167,4 +167,4 @@ class Employee{
 }
 let emp = new Employee("Alice", 50000)
 console.log(emp.salary);
-emp.salary= -64576
+emp.salary= -64576=
