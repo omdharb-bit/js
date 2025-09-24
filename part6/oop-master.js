@@ -140,7 +140,17 @@ class Calculator{
 // console.log(Calculator.add(2,3));
 
 
-// Getters and Setters
+// Getters and Setters  How do getters and setters work in JavaScript?
+
+//   getters and setters in JavaScript serve to retrieve and update property values while allowing you to manage how those properties are accessed and modified, enhancing encapsulation and control within your objects. This understanding directly relates to how object-oriented programming aims to protect data and provide a clean interface for interaction.
+
+ 
+
+
+
+
+
+
 
 class Employee{
   #salary;
@@ -167,4 +177,4 @@ class Employee{
 }
 let emp = new Employee("Alice", 50000)
 console.log(emp.salary);
-emp.salary= -64576=
+emp.salary= -64576
