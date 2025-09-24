@@ -55,5 +55,116 @@ class Car extends Vechile{
 }
 
 let myCar = new Car("Toyota", "Corolla")
-console.log(myCar.start());
-console.log(myCar.drive());
+// console.log(myCar.start());
+// console.log(myCar.drive());
+
+
+
+// Encapsulation- is a concept of restricting direct access to data object
+
+
+class BankAccount {
+  #balance = 10
+  
+  deposit(amount) {
+    this.#balance += amount
+    return this.#balance
+  }
+  getBalance() {
+    return `$ ${this.#balance}`
+  }
+}
+let account = new BankAccount()
+// console.log(account.getBalance());
+
+
+
+//  Abstraction- is a concept of hiding complex implementation details and showing only the necessary parts to the user
+
+class CoffeeMachine{
+
+  start() {
+  // call DB
+    // filter value
+    return `Starting the machine... `
+  }
+  brewCoffee() {
+    // complex calculation
+    return `Brewing coffee`
+  }
+  
+  pressStartButton() {
+    this.start()
+    this.brewCoffee()
+  }
+}
+let myMachine = new CoffeeMachine()
+// console.log(myMachine.start());
+// console.log(myMachine.brewCoffee());
+ 
+
+
+//  Polymorphism - is a concept where a single function or method can work in different ways based on the object that it is acting upon.
+
+
+class Bird{
+  fly() {
+  return`Flying......`
+  }
+}
+
+class Penguin extends Bird{
+  fly() {
+  return `Penguins can't fly`
+  }
+}
+
+let bird = new Bird()
+let penguin = new Penguin()
+// console.log(bird.fly());
+//  console.log(penguin.fly());
+ 
+
+// Static methods
+
+class Calculator{
+
+  static add(a, b) {
+  return a+b
+  }
+}
+
+// let miniCalc = new Calculator();
+// console.log(miniCalc.add(4,3));
+
+// console.log(Calculator.add(2,3));
+
+
+// Getters and Setters
+
+class Employee{
+  #salary;
+  
+  constructor(name, salary) {
+    this.name = name
+    this.salary=salary
+  }
+  
+  get salary() {
+  
+    return `You are not allowed to see salary`
+  }
+  
+  
+  set salary(value) {
+    if (value < 0) {
+    console.error("Invalid Salary")
+    } else {
+     
+    }
+  }
+  
+}
+let emp = new Employee("Alice", 50000)
+console.log(emp.salary);
+emp.salary= -64576
